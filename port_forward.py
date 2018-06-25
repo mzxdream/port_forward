@@ -61,6 +61,6 @@ if __name__ == '__main__':
     except (ValueError, IndexError):
         print 'Usage: %s port targethost [targetport]' % sys.argv[0]
         sys.exit(1)
-    ForwardServer(port, targethost, targetport)
+    ForwardServer(port, targethost, targetport).start()
     while True:
         time.sleep(10)
